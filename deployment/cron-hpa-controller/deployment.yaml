@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cron-hpa-controller
+  labels:
+    app: cron-hpa-controller
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cron-hpa-controller
+  template:
+    metadata:
+      labels:
+        app: cron-hpa-controller
+    spec:
+      containers:
+        - name: cron-hpa-controller
+          image: "{{ .Values.image.repository }}/kube-batch:{{ .Values.image.tag }}"
+          args: ["--logtostderr", "--v", "3"]
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          resources:
+  {{ toYaml .Values.resources | indent 10 }}
