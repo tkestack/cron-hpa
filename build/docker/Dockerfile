@@ -1,4 +1,4 @@
-From alpine:3.9
+From alpine:3.10
 
 ADD cron-hpa-controller /usr/local/bin
 RUN mkdir /etc/certs
