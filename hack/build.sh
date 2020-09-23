@@ -16,7 +16,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-go build -o bin/cron-hpa-controller .
+CGO_ENABLED=0 go build -o bin/cron-hpa-controller .
 if [ $? -eq 0 ]; then
   echo "Build success!"
 else
