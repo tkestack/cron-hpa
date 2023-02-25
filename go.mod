@@ -4,7 +4,7 @@ go 1.16
 
 require (
 	github.com/coreos/etcd v3.3.25+incompatible // indirect
-	github.com/docker/distribution v2.6.0-rc.1.0.20170726174610-edc3ab29cdff+incompatible // indirect
+	github.com/docker/distribution v2.8.0+incompatible // indirect
 	github.com/evanphx/json-patch v4.1.0+incompatible // indirect
 	github.com/googleapis/gnostic v0.0.0-20170729233727-0c5108395e2d // indirect
 	github.com/gregjones/httpcache v0.0.0-20170728041850-787624de3eb7 // indirect
